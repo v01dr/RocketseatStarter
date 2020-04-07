@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercícios: Módulo 01</title>
+    </head>
+    <body>
+
+        <script>
+            /**
+            1º Exercício
+            */
+            function addressToText(addr){
+                addrText = "O usuário mora em " 
+                    + addr.cidade + " / " 
+                    + addr.uf + ", no bairro"
+                    +addr.bairro + ', na rua \"'
+                    +addr.rua + '\" com nº'
+                    +addr.numero;
+
+                return addrText;
+            }
+
+            var endereco = {
+                  rua: "Rua dos pinheiros",  
+                  numero: 1293,  bairro: "Centro",  
+                  cidade: "São Paulo", 
+                   uf: "SP"
+            };
+
+            var text = addressToText(endereco);
+            //console.log(text);
+
+            /**
+            2º Exercício
+            */
+            function pares(x, y){
+                for(var i = x;i <= y;i++){
+                    if((i % 2) == 0){
+                        console.log(i);
+                    }
+                }
+            }
+            //pares(32,321);
+
+            /**
+            3º Exercício
+            */
+            function hasAbility(skills){
+                var retorno = (skills.indexOf("Javascript") === -1) ? false : true
+
+                return retorno;
+            }
+            var skills = ["Javascript", "ReactJS","React Native"];
+            //console.log(hasAbility(skills));
+
+            /**
+            4º Exercício
+            */
+            function experiencia(anos){
+                a = anos;
+                switch(true){
+                    case (a>=0 && a<1): return 'Iniciante';
+                    case (a>=1 && a<3): return 'Intermediário';
+                    case (a>=3 && a<6): return 'Avançado';
+                    case (a>=7): return 'Jedi';
+                    default: return 'Sem experiência';
+                }
+            }
+            var expertise = experiencia(7);
+            //console.log(expertise);
+
+            /**
+            5º Exercício
+            */
+            function descricaoHabilidades(usuarios){
+                for (let usuario of usuarios){
+                    /**
+                    var habs = "";
+                    numHabilidades = usuario.habilidades.length;
+                    for(var i = 0; i < numHabilidades; i++){
+                        habs += (i !== numHabilidades-1)? 
+                            (usuario.habilidades[i] + ", ") : 
+                            (usuario.habilidades[i]);
+                    }
+                    console.log(
+                        "O " + usuario.nome + 
+                        " possui as habilidades: " + habs
+                    );
+                    */
+                    console.log(
+                        "O " + usuario.nome + 
+                        " possui as habilidades: " + usuario.habilidades.join(",")
+                    );
+
+                }
+            }
+
+            var usuarios = [  
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                },
+                {
+                    nome: "Jullyano",
+                    habilidades: ["NodeJS", "ReactJS", "React Native"]
+                }
+            ];
+
+            descricaoHabilidades(usuarios);
+
+        </script>
+    </body>
+</html>

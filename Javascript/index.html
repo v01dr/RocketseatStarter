@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso: Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <button onmouseover="showAlert()">Press me</button>
+        </div>
+
+        <script>
+            //javascript localizado após a criação de todos os elementos DOM
+            /**
+            var name = "r33";
+            var age = 35;
+            var weight = 70;
+            var human = true;
+
+            var students = ['r33', 'precaron', 'haxor'];
+
+            var student = {
+                name: 'r33',
+                age: 21,
+                weight: 70,
+                human: true
+            }
+
+            console.log(name);
+            console.log(students[1]);
+            console.log(student.name);
+            */
+
+            /**
+            var x = 10, y =5;
+
+            var result = x + y;
+            console.log(result);
+            */
+
+            /**
+            function getSex(sex){
+                
+                if(sex === 'M'){
+                    return 'Masculine';
+                } else if(sex === 'F'){
+                    return 'Feminine';
+                } else{
+                    return 'Other';
+                }
+                
+            }
+
+            function getSex2(sex){
+                switch (sex){
+                    case 'M': return 'Masculine';
+                    case 'F': return 'Feminine';
+                    default: return 'Other';
+                }
+            }
+
+            var result = getSex2('L');
+            console.log(result);
+
+            var masculine = (result === 'M');
+            console.log(masculine);
+
+            var retorno = (result === 'M') ? 'Masculine' : 'Feminine';
+            console.log(retorno);
+            */
+
+            /**
+            for (var i = 0; i <= 100; i++){
+                console.log(i);
+            }
+
+            var j = 808237273289742389;
+            while(j > 100){
+                console.log(j);
+
+                j /= 5;
+            }
+            */
+
+            /**
+            function showSomething(){
+                console.log('Be the hero!');
+            }
+
+            setInterval(showSomething, 1000);
+            setTimeout(showSomething, 3000);
+            */
+
+            function showAlert(){
+                alert('The Button was pressed!');
+            }
+            var vet = ["Javascript", "ReactJS","React Native"];
+            console.log(vet.join('|'));
+        </script>
+    </body>
+</html>
