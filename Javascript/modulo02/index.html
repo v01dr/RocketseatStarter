@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript: Trabalhando com DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome" />
+            <button class="botao">Adicionar</button>
+        </div>
+
+        <script>
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function(){
+                var text = inputElement.value; 
+                alert(text);
+            }
+            /**
+            //var inputElement = document.querySelector('input[name=nome]');
+            //document.querySelectorAll('input');
+            //document.querySelector('body div#app input');
+            //document.getElementsByClassName('nome')[0];
+            //document.getElementsByTagName('input')[0];
+            //document.getElementById('nome');
+            //console.log(inputElement);
+            */
+        </script>
+    </body>
+</html>
