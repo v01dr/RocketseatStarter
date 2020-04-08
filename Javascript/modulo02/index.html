@@ -5,17 +5,46 @@
     </head>
     <body>
         <div id="app">
+            <div class="box"></div>
+            <!--
+            <input id="nome" />
+            -->
+            <!--
             <input type="text" name="nome" id="nome" class="nome" />
             <button class="botao">Adicionar</button>
+            -->
         </div>
 
         <script>
+            var boxElement = document.querySelector('.box');
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+            /**
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+
+            var textElement = document.createTextNode('Acessar site do Rocketseat');    
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement); 
+            */
+
+            /**
             var inputElement = document.querySelector('input[name=nome]');
             var btnElement = document.querySelector('button.botao');
             btnElement.onclick = function(){
                 var text = inputElement.value; 
                 alert(text);
             }
+            */
             /**
             //var inputElement = document.querySelector('input[name=nome]');
             //document.querySelectorAll('input');
