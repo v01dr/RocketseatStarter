@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Challenges: Module 02</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="box"></div>
+            <button class="btn">Add red square</button>
+        </div>
+
+        <script>
+            /**
+            1º Exercício
+            */
+
+            var btnElement = document.querySelector('button.btn');
+            var mainDiv = document.querySelector('.box');
+            
+            btnElement.onclick = function(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.style.position = "absolute";
+                boxElement.style.left = genRandom(0,1000) + 'px';
+                boxElement.style.top = genRandom(0,1000) + 'px';
+                boxElement.onmouseover = function (){
+                    boxElement.style.backgroundColor = getRandomColor();
+                }
+
+                mainDiv.appendChild(boxElement);
+
+            }
+            function genRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            /**
+            2º Exercício
+            */
+
+            function getRandomColor(){
+                var letters = "0123456789ABCDEF";  
+                var color = "#";  
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Challenges: Module 02</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onclick="adicionar()">Adicionar</button>
+            <div class="box"></div>
+        </div>
+
+        <script>
+            /**
+            3º Exercício
+            */
+            var nomes = ["Diogo", "Gabriel", "Lucas"];
+
+            var boxElement = document.querySelector('.box');
+
+            function exibir(vetor, element){
+                var ulElement = document.createElement("ul");
+                for (let v of vetor){
+                    var liElement = document.createElement('li');
+                    liElement.appendChild(document.createTextNode(v));
+                    ulElement.appendChild(liElement);
+                }
+
+                element.appendChild(ulElement);
+            }
+
+            exibir(nomes, boxElement);
+
+            /**
+            4º Exercício
+            */
+            function adicionar(){
+                var inputElement = document.querySelector('input');
+                if (inputElement.value !== ""){
+                    nomes.push(inputElement.value);
+                    boxElement.innerHTML = '';
+                    exibir(nomes, boxElement);
+                    inputElement.value = "";
+                }
+
+                return;
+            }
+            
+            
+
+        </script>
+    </body>
+</html>
