@@ -1,4 +1,4 @@
-/**Promise allows handle asynchronous requests */
+/**Axios turns working with AJAX requests easy */
 axios.get('https://api.github.com/users/r33-code')
     .then(function(response) {
         console.log(response);
