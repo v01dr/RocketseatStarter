@@ -81,32 +81,44 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./module02/class/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./module02/class/src/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./module02/class/functions.js":
-/*!*************************************!*\
-  !*** ./module02/class/functions.js ***!
-  \*************************************/
-/*! exports provided: soma */
+/***/ "./module02/class/src/functions.js":
+/*!*****************************************!*\
+  !*** ./module02/class/src/functions.js ***!
+  \*****************************************/
+/*! exports provided: soma, sub, mult */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./module02/class/functions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"mult\", function() { return mult; });\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\nfunction mult(a, b) {\n  return a * b;\n}\n\n//# sourceURL=webpack:///./module02/class/src/functions.js?");
 
 /***/ }),
 
-/***/ "./module02/class/main.js":
-/*!********************************!*\
-  !*** ./module02/class/main.js ***!
-  \********************************/
+/***/ "./module02/class/src/main.js":
+/*!************************************!*\
+  !*** ./module02/class/src/main.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ \"./module02/class/functions.js\");\n\nconsole.log(\"Aqui\");\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 2));\n\n//# sourceURL=webpack:///./module02/class/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ \"./module02/class/src/functions.js\");\n/* harmony import */ var _soma__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./soma */ \"./module02/class/src/soma.js\");\n//import * as functions from './functions';\n//import soma, { sub } from './functions';\n\n\nconsole.log(Object(_soma__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(1, 2));\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"sub\"])(1, 2));\n\n//# sourceURL=webpack:///./module02/class/src/main.js?");
+
+/***/ }),
+
+/***/ "./module02/class/src/soma.js":
+/*!************************************!*\
+  !*** ./module02/class/src/soma.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./module02/class/src/soma.js?");
 
 /***/ })
 
