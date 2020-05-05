@@ -10,6 +10,10 @@
   },
   "scripts": {
     "dev": "babel ./main.js -o ./bundle.js -w",
-    "dev_module01": "babel ./module01/class/main.js -o ./module01/class/bundle.js -w"
+    "dev_module01": "babel ./module01/class/main.js -o ./module01/class/bundle.js -w",
+    "dev_challengesmodule01": "babel ./module01/challenge/main.js -o ./module01/challenge/bundle.js -w"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6"
   }
 }
