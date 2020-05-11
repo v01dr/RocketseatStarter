@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
 //Initializing the app
 const app = express();
+app.use(express.json());
 
 //Initialing the database
 const dbURL = 'mongodb://192.168.99.101:27017/nodeapi';
@@ -28,19 +30,6 @@ mongoose.connection.on('disconnected', function(){
 
 requireDir('./src/models');
 
-
-
-const Product = mongoose.model('Product');
-
-//First route
-app.get('/', (req, res) => {
-    Product.create({
-            title: 'React Native',
-            description: 'Build native apps with React Native',
-            url: 'http://github.com/facebook/react-ntive'
-    });
-    
-    return res.send('Hello, Hero!!!');
-});
+app.use('/api', require('./src/routes'));
 
 app.listen(3030);
