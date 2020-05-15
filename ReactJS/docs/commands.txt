@@ -1,3 +1,4 @@
 #npm install -g create-react-app
 #create-react-app huntweb
+$yarn add <some_package>
 $npm start

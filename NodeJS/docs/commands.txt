@@ -1,8 +1,9 @@
 https://docs.docker.com/toolbox/toolbox_install_windows/
-docker pull mongo
-docker run -name mongodb -p 27017:27017 mongo
-docker start mongodb
-docker stop mongodb
+$docker pull mongo
+$docker run -name mongodb -p 27017:27017 mongo
+$docker start mongodb
+$docker stop mongodb
 
-nodemon server.js
-npm run dev
+$nodemon server.js
+$yarn add <some_package>
+$npm run dev
